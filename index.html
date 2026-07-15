@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>anywhere - Macを閉じたい。でも、ジョブは止めたくない。</title>
+    <meta
+      name="description"
+      content="anywhereは、Macを閉じて外出しても、Claude Code、Webクローラー、ビルドなどの長時間ジョブを止めずに走らせるオープンソースツールです。時間指定の自動OFFにも対応。"
+    />
+    <meta property="og:title" content="anywhere - Macを閉じたい。でも、ジョブは止めたくない。" />
+    <meta
+      property="og:description"
+      content="外出したい。でもClaude Codeやクローラーは止めたくない。Macを閉じても長時間ジョブを走らせ、時間指定で消し忘れも防ぐオープンソースツール。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/anywhere-hero.png" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="brand" href="#top" aria-label="anywhere home">
+        <img class="brand-mark" src="./assets/anywhere-logo.png" alt="" />
+        <span>anywhere</span>
+      </a>
+      <nav class="nav" aria-label="メインナビゲーション">
+        <a href="#how">使い方</a>
+        <a href="https://github.com/Qurio-Inc/anywhere-releases" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="./assets/anywhere-hero.png" alt="" />
+        <div class="hero-shade"></div>
+
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            <span>Macを閉じたい。</span>
+            <span>でも、ジョブは</span>
+            <span>止めたくない。</span>
+          </h1>
+          <p class="hero-lead">
+            Claude Codeもクローラーも走らせたまま、外へ。
+          </p>
+
+          <div class="command-pill" aria-label="anywhere command example">
+            <span class="terminal-mark">$</span>
+            <code>anywhere <b>on 2h</b></code>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#download" data-os-cta>Macに入れる</a>
+          </div>
+          <p class="compat">macOS 13+ 対応　|　Apple Silicon / Intel 両対応</p>
+        </div>
+      </section>
+
+      <section class="quick-start" aria-labelledby="quick-title">
+        <div class="section-heading">
+          <h2 id="quick-title">外出前の5秒でON</h2>
+          <p>終わりが読めないジョブも、時間を決めれば安心して外に出られる。</p>
+        </div>
+        <div class="scenario-list">
+          <article>
+            <span>30m</span>
+            <h3>カフェで集中</h3>
+            <p>短時間の作業やテストに。</p>
+          </article>
+          <article>
+            <span>2h</span>
+            <h3>電車で移動</h3>
+            <p>移動中もAIとクローラーが働く。</p>
+          </article>
+          <article>
+            <span>1d</span>
+            <h3>夜通しクローリング</h3>
+            <p>寝ている間に、すべて自動で。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how" class="section how-section" aria-labelledby="how-title">
+        <div class="section-heading">
+          <p class="eyebrow">HOW IT WORKS</p>
+          <h2 id="how-title">
+            <span>ただのcaffeinateではなく、</span>
+            <span>フタ閉じまで見る。</span>
+          </h2>
+          <p>
+            macOSには「操作がないときのスリープ」と「フタを閉じたときのスリープ」があります。
+            anywhereは両方を同時に扱い、外出時の長時間ジョブを止めません。
+          </p>
+        </div>
+        <div class="mechanism">
+          <div><span>Idle sleep</span><strong>caffeinate -dimu</strong></div>
+          <div><span>Lid-close sleep</span><strong>pmset disablesleep</strong></div>
+          <div><span>Auto-off</span><strong>30m / 2h / 1d</strong></div>
+          <div><span>Status</span><strong>power / battery / tether</strong></div>
+        </div>
+        <div class="safety-notes" aria-label="安心のための設計">
+          <p>OFFで設定を元に戻す。</p>
+          <p>時間指定で消し忘れを防ぐ。</p>
+          <p>電源・バッテリー・テザリング状態を確認できる。</p>
+        </div>
+      </section>
+
+      <section id="download" class="section download-section" aria-labelledby="download-title">
+        <div class="section-heading">
+          <p class="eyebrow">DOWNLOAD</p>
+          <h2 id="download-title">MacもWindowsも、今すぐ。</h2>
+          <p>ダウンロードして開くだけ。インストールが終わると、チュートリアルが自動で始まります。</p>
+        </div>
+        <div class="download-buttons">
+          <a class="button primary" data-dl-mac
+             href="https://github.com/Qurio-Inc/anywhere-releases/releases/latest/download/anywhere-mac.dmg">
+            Mac版をダウンロード
+          </a>
+          <a class="button ghost" data-dl-win
+             href="https://github.com/Qurio-Inc/anywhere-releases/releases/latest/download/anywhere-windows-setup.exe">
+            Windows版をダウンロード
+          </a>
+        </div>
+        <p class="dl-note">
+          macOS 13+（Apple Silicon / Intel）・Windows 10/11。
+          過去のバージョンは <a href="https://github.com/Qurio-Inc/anywhere-releases/releases" rel="noreferrer">Releases</a> から。
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>anywhere</span>
+      <a href="https://github.com/Qurio-Inc/anywhere-releases" rel="noreferrer">GitHub</a>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
