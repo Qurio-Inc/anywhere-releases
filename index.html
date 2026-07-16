@@ -6,7 +6,7 @@
     <title>anywhere - Macを閉じたい。でも、ジョブは止めたくない。</title>
     <meta
       name="description"
-      content="anywhereは、Macを閉じて外出しても、Claude Code、Webクローラー、ビルドなどの長時間ジョブを止めずに走らせるオープンソースツールです。時間指定の自動OFFにも対応。"
+      content="anywhereは、Macを閉じて外出しても、Claude Code、Webクローラー、ビルドなどの長時間ジョブを止めずに走らせるツールです。メニューバーのパネルから時間を選ぶだけで、自動OFFにも対応。"
     />
     <meta property="og:title" content="anywhere - Macを閉じたい。でも、ジョブは止めたくない。" />
     <meta
@@ -41,13 +41,8 @@
             <span>止めたくない。</span>
           </h1>
           <p class="hero-lead">
-            Claude Codeもクローラーも走らせたまま、外へ。
+            メニューバーから時間を選ぶだけ。Claude Codeもクローラーも走らせたまま、外へ。
           </p>
-
-          <div class="command-pill" aria-label="anywhere command example">
-            <span class="terminal-mark">$</span>
-            <code>anywhere <b>on 2h</b></code>
-          </div>
 
           <div class="hero-actions">
             <a class="button primary" href="#download" data-os-cta>Macに入れる</a>
@@ -57,9 +52,18 @@
       </section>
 
       <section class="quick-start" aria-labelledby="quick-title">
-        <div class="section-heading">
-          <h2 id="quick-title">外出前の5秒でON</h2>
-          <p>終わりが読めないジョブも、時間を決めれば安心して外に出られる。</p>
+        <div class="panel-layout">
+          <div class="section-heading">
+            <p class="eyebrow">NO TERMINAL REQUIRED</p>
+            <h2 id="quick-title">外出前に、時間だけ決める。</h2>
+            <p>
+              パネルで30分・1時間・2時間を選ぶだけ。タップでOFFに戻せて、
+              電源状態やフタを閉じたときの挙動も同じ画面で確認できます。
+            </p>
+          </div>
+          <figure class="panel-shot">
+            <img src="./assets/anywhere-panel-real.png" alt="Anywhereモードのメニューバーパネル。自動OFF、電源、フタを閉じたときの状態を表示している。" />
+          </figure>
         </div>
         <div class="scenario-list">
           <article>
@@ -84,7 +88,7 @@
         <div class="section-heading">
           <p class="eyebrow">HOW IT WORKS</p>
           <h2 id="how-title">
-            <span>ただのcaffeinateではなく、</span>
+            <span>パネルの裏側で、</span>
             <span>フタ閉じまで見る。</span>
           </h2>
           <p>
