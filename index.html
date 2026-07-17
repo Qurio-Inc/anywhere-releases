@@ -6,12 +6,12 @@
     <title>anywhere - Macを閉じたい。でも、ジョブは止めたくない。</title>
     <meta
       name="description"
-      content="anywhereは、Macを閉じて外出しても、Claude Code、Webクローラー、ビルドなどの長時間ジョブを止めずに走らせるツールです。メニューバーのパネルから時間を選ぶだけで、自動OFFにも対応。"
+      content="Macは普段、フタを閉じた瞬間に眠り、ジョブも止まります。anywhereは時間を選んで閉じるだけで、Claude Codeやクローラーをカバンの中でも走らせ続けるメニューバーツール。時間が来たら自動でOFF。"
     />
     <meta property="og:title" content="anywhere - Macを閉じたい。でも、ジョブは止めたくない。" />
     <meta
       property="og:description"
-      content="外出したい。でもClaude Codeやクローラーは止めたくない。Macを閉じても長時間ジョブを走らせ、時間指定で消し忘れも防ぐオープンソースツール。"
+      content="「フタを閉じたら、ジョブも止まる」をなくす。時間を選んで閉じるだけで、カバンの中でもMacは働き続ける。時間が来たら自動でOFF、消し忘れの心配なし。"
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/anywhere-hero.png" />
@@ -41,7 +41,7 @@
             <span>止めたくない。</span>
           </h1>
           <p class="hero-lead">
-            メニューバーから時間を選ぶだけ。Claude Codeもクローラーも走らせたまま、外へ。
+            時間を選んで、フタを閉じるだけ。カバンの中でも、Claude Codeは走り続ける。
           </p>
 
           <div class="hero-actions">
@@ -58,7 +58,7 @@
             <h2 id="quick-title">外出前に、時間だけ決める。</h2>
             <p>
               パネルで30分・1時間・2時間を選ぶだけ。タップでOFFに戻せて、
-              電源状態やフタを閉じたときの挙動も同じ画面で確認できます。
+              電源・テザリング・フタを閉じたときの挙動も同じ画面で確認できます。
             </p>
           </div>
           <figure class="panel-shot">
@@ -68,13 +68,13 @@
         <div class="scenario-list">
           <article>
             <span>30m</span>
-            <h3>カフェで集中</h3>
-            <p>短時間の作業やテストに。</p>
+            <h3>フタを閉じて、ランチへ</h3>
+            <p>戻る頃には、テストもビルドも終わっている。</p>
           </article>
           <article>
             <span>2h</span>
-            <h3>電車で移動</h3>
-            <p>移動中もAIとクローラーが働く。</p>
+            <h3>移動中も、カバンの中で</h3>
+            <p>テザリングにつないだまま閉じれば、電車でもAIとクローラーは働き続ける。</p>
           </article>
           <article>
             <span>1d</span>
@@ -88,24 +88,47 @@
         <div class="section-heading">
           <p class="eyebrow">HOW IT WORKS</p>
           <h2 id="how-title">
-            <span>パネルの裏側で、</span>
-            <span>フタ閉じまで見る。</span>
+            <span>「閉じたら止まる」を、</span>
+            <span>なくす。</span>
           </h2>
           <p>
-            macOSには「操作がないときのスリープ」と「フタを閉じたときのスリープ」があります。
-            anywhereは両方を同時に扱い、外出時の長時間ジョブを止めません。
+            Macは普段、フタを閉じた瞬間に眠り、走っていたジョブも一緒に止まります。
+            anywhereは、あなたが決めた時間だけMacを眠らせない。
+            だから、閉じてカバンに入れても仕事は続きます。
           </p>
         </div>
-        <div class="mechanism">
-          <div><span>Idle sleep</span><strong>caffeinate -dimu</strong></div>
-          <div><span>Lid-close sleep</span><strong>pmset disablesleep</strong></div>
-          <div><span>Auto-off</span><strong>30m / 2h / 1d</strong></div>
-          <div><span>Status</span><strong>power / battery / tether</strong></div>
-        </div>
-        <div class="safety-notes" aria-label="安心のための設計">
-          <p>OFFで設定を元に戻す。</p>
-          <p>時間指定で消し忘れを防ぐ。</p>
-          <p>電源・バッテリー・テザリング状態を確認できる。</p>
+        <div class="flow" role="list">
+          <article class="flow-step" role="listitem">
+            <div class="flow-node" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v8" />
+                <path d="M6.3 6.5a8 8 0 1 0 11.4 0" />
+              </svg>
+            </div>
+            <h3>ONにする</h3>
+            <p>その瞬間から、放っておいても、フタを閉じても、Macは眠らなくなる。</p>
+          </article>
+          <article class="flow-step" role="listitem">
+            <div class="flow-node live" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 16V7.2A1.7 1.7 0 0 1 6.7 5.5h10.6A1.7 1.7 0 0 1 19 7.2V16" />
+                <path d="M2.5 18.5h19" />
+                <circle cx="12" cy="10.8" r="1.5" fill="currentColor" stroke="none" />
+              </svg>
+            </div>
+            <h3>閉じて、カバンへ</h3>
+            <p>iPhoneのテザリングにつないでおけば、歩いている間もジョブは走り続ける。接続と電源の状態はパネルでひと目。</p>
+          </article>
+          <article class="flow-step" role="listitem">
+            <div class="flow-node" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M12 7.5V12l3 2" />
+              </svg>
+            </div>
+            <h3>時間が来たら、自動OFF</h3>
+            <p>選んだ時間で設定は自動で元通り。消し忘れの心配はありません。</p>
+          </article>
         </div>
       </section>
 
