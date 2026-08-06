@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>anywhere - Macを閉じたい。でも、ジョブは止めたくない。</title>
+    <title>anywhere - Macのフタを閉じてもスリープさせない無料アプリ（macOS/Windows対応）</title>
     <meta
       name="description"
-      content="Macは普段、フタを閉じた瞬間に眠り、ジョブも止まります。anywhereは時間を選んで閉じるだけで、Claude Codeやクローラーをカバンの中でも走らせ続けるメニューバーツール。時間が来たら自動でOFF。"
+      content="「フタを閉じるとスリープしてジョブが止まる」をなくす無料アプリ。外部ディスプレイなし・バッテリー駆動のままMacをスリープさせず、Claude Codeやビルド、ダウンロードを走らせ続けます。時間が来たら自動OFFで元の設定に復元。macOS 13+／Windows 10/11対応、オープンソース。"
     />
+    <link rel="canonical" href="https://anywhere.qurio-inc.com/" />
     <meta property="og:title" content="anywhere - Macを閉じたい。でも、ジョブは止めたくない。" />
+    <meta property="og:site_name" content="anywhere" />
+    <meta property="og:locale" content="ja_JP" />
     <meta
       property="og:description"
       content="「フタを閉じたら、ジョブも止まる」をなくす。時間を選んで閉じるだけで、カバンの中でもMacは働き続ける。時間が来たら自動でOFF、消し忘れの心配なし。"
@@ -24,6 +27,88 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="./assets/anywhere-logo.png" />
     <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "anywhere",
+          "url": "https://anywhere.qurio-inc.com/",
+          "description": "Macのフタを閉じてもスリープさせず、Claude Codeやビルド、ダウンロードなどのジョブを走らせ続けるメニューバーアプリ。外部ディスプレイ・電源接続なしで動作し、指定時間で自動的に元のスリープ設定へ復元する。",
+          "applicationCategory": "UtilitiesApplication",
+          "operatingSystem": "macOS 13以降（Apple Silicon / Intel）、Windows 10/11",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+          "isAccessibleForFree": true,
+          "softwareVersion": "0.1.2",
+          "downloadUrl": "https://github.com/Qurio-Inc/anywhere-releases/releases/latest",
+          "license": "https://github.com/Qurio-Inc/code_anywhere/blob/main/LICENSE",
+          "image": "https://anywhere.qurio-inc.com/assets/og-image.png",
+          "sameAs": ["https://github.com/Qurio-Inc/code_anywhere"],
+          "inLanguage": "ja",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Qurio Inc",
+            "url": "https://www.qurio-inc.com/",
+            "sameAs": ["https://github.com/Qurio-Inc"]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Macのフタを閉じてもスリープさせない方法はありますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "通常のmacOSでフタを閉じたまま処理を続けるには、外部ディスプレイと電源接続が必要な「クラムシェルモード」を使うしかありません。anywhereならメニューバーからONにするだけで、外部ディスプレイなし・バッテリー駆動のままフタを閉じてもスリープしない状態にできます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "バッテリーだけで動きますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "動きます。電源アダプタも外部ディスプレイも不要で、カバンに入れたまま処理を続けられます。バッテリー残量はパネルで確認でき、残量が少なくなると警告を表示します。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "OFFにし忘れても大丈夫ですか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "30分・1時間・2時間など時間を決めてONにすれば、時間が来た時点で自動的にOFFになり、スリープ設定も元の状態に完全に戻ります。消し忘れでバッテリーを使い切る心配はありません。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "料金はかかりますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "無料です。MITライセンスのオープンソースソフトウェアとして、ソースコード全体をGitHubで公開しています。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "安全なソフトですか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "初回セットアップ時に一度だけ管理者の許可を求めます。macOSではスリープ設定切替（pmset）専用のsudoersルール、Windowsでは電源設定用のScheduled Taskを登録するためで、それ以外の権限は使いません。ソースコードが公開されているため、動作は誰でも検証できます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Windowsでも使えますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Windows 10/11に対応しています。タスクトレイ常駐アプリとして動作し、フタを閉じたときのスリープ設定を自動で切り替え、OFFにすると元の設定へ復元します。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="サイトヘッダー">
@@ -33,6 +118,7 @@
       </a>
       <nav class="nav" aria-label="メインナビゲーション">
         <a href="#how">使い方</a>
+        <a href="#faq">FAQ</a>
         <a href="https://github.com/Qurio-Inc/code_anywhere" rel="noreferrer">GitHub</a>
       </nav>
     </header>
@@ -161,6 +247,59 @@
           過去のバージョンは <a href="https://github.com/Qurio-Inc/anywhere-releases/releases" rel="noreferrer">Releases</a> から。
           ソースコードは <a href="https://github.com/Qurio-Inc/code_anywhere" rel="noreferrer">GitHub で公開</a>しています。
         </p>
+      </section>
+
+      <section id="faq" class="section faq-section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">よくある質問</h2>
+        </div>
+        <dl class="faq-list">
+          <div class="faq-item">
+            <dt>Macのフタを閉じてもスリープさせない方法はありますか？</dt>
+            <dd>
+              通常のmacOSでフタを閉じたまま処理を続けるには、外部ディスプレイと電源接続が必要な
+              「クラムシェルモード」を使うしかありません。anywhereならメニューバーからONにするだけで、
+              外部ディスプレイなし・バッテリー駆動のままフタを閉じてもスリープしない状態にできます。
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>バッテリーだけで動きますか？</dt>
+            <dd>
+              動きます。電源アダプタも外部ディスプレイも不要で、カバンに入れたまま処理を続けられます。
+              バッテリー残量はパネルで確認でき、残量が少なくなると警告を表示します。
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>OFFにし忘れても大丈夫ですか？</dt>
+            <dd>
+              30分・1時間・2時間など時間を決めてONにすれば、時間が来た時点で自動的にOFFになり、
+              スリープ設定も元の状態に完全に戻ります。消し忘れでバッテリーを使い切る心配はありません。
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>料金はかかりますか？</dt>
+            <dd>
+              無料です。MITライセンスのオープンソースソフトウェアとして、ソースコード全体を
+              <a href="https://github.com/Qurio-Inc/code_anywhere" rel="noreferrer">GitHub</a> で公開しています。
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>安全なソフトですか？</dt>
+            <dd>
+              初回セットアップ時に一度だけ管理者の許可を求めます。macOSではスリープ設定切替（pmset）専用の
+              sudoersルール、Windowsでは電源設定用のScheduled Taskを登録するためで、それ以外の権限は使いません。
+              ソースコードが公開されているため、動作は誰でも検証できます。
+            </dd>
+          </div>
+          <div class="faq-item">
+            <dt>Windowsでも使えますか？</dt>
+            <dd>
+              Windows 10/11に対応しています。タスクトレイ常駐アプリとして動作し、フタを閉じたときの
+              スリープ設定を自動で切り替え、OFFにすると元の設定へ復元します。
+            </dd>
+          </div>
+        </dl>
       </section>
     </main>
 

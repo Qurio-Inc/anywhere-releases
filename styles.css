@@ -530,3 +530,33 @@ h1 span {
   color: var(--amber);
   text-decoration: none;
 }
+
+/* ------------------------------------------------------------------- FAQ */
+
+.faq-list {
+  max-width: 860px;
+  margin: 40px auto 0;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item dt {
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.faq-item dd {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.faq-item dd a {
+  color: var(--amber);
+  text-decoration: none;
+}

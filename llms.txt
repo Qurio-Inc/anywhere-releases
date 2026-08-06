@@ -1,0 +1,28 @@
+# anywhere
+
+> Macのフタを閉じてもスリープさせず、Claude Code・ビルド・ダウンロードなどのジョブを走らせ続ける無料のメニューバーアプリ。外部ディスプレイや電源接続は不要で、バッテリー駆動のまま動作します。指定した時間が来ると自動でOFFになり、元のスリープ設定に完全に復元されます。macOS 13+（Apple Silicon / Intel）と Windows 10/11 に対応。MITライセンスのオープンソースソフトウェアです。
+
+anywhere is a free, open-source (MIT) menu-bar / system-tray app that keeps a
+laptop working with the lid closed — on battery, no external display required.
+Pick a duration (30m / 1h / 2h), close the lid, and long-running jobs (Claude
+Code sessions, builds, crawlers, downloads) keep running; when the timer ends,
+the original sleep settings are restored automatically. Developed by Qurio Inc.
+
+## How it works
+
+- macOS: menu-bar app; toggles lid-close sleep via a tightly-scoped
+  passwordless-sudo rule for `pmset -a disablesleep` (installed once with an
+  admin prompt), and blocks idle sleep with `caffeinate`.
+- Windows: system-tray app; overrides the power scheme's lid-close action via
+  elevated Scheduled Tasks registered once (single UAC prompt), and blocks
+  idle sleep with `SetThreadExecutionState`. The original setting is backed up
+  and restored on OFF.
+- Auto-off: an optional timer turns the mode off and restores everything, so
+  a forgotten session cannot drain the battery overnight.
+
+## Links
+
+- [ランディングページ / Landing page](https://anywhere.qurio-inc.com/)
+- [ダウンロード / Downloads](https://github.com/Qurio-Inc/anywhere-releases/releases/latest): anywhere-mac.dmg (notarized), anywhere-windows-setup.exe
+- [ソースコード / Source code](https://github.com/Qurio-Inc/code_anywhere): monorepo — Tauri desktop app (`app/`), macOS CLI + SwiftBar plugin (`mac/`), Windows CLI + tray (`windows/`)
+- [会社 / Company](https://www.qurio-inc.com/): Qurio Inc
