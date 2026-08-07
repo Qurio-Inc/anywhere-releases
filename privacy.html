@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>プライバシーポリシー - anywhere</title>
+    <meta name="description" content="anywhere のプライバシーポリシー。anywhere は個人情報を一切収集・送信しません。" />
+    <link rel="canonical" href="https://anywhere.qurio-inc.com/privacy.html" />
+    <link rel="icon" type="image/png" href="./assets/anywhere-logo.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .legal {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 140px 22px 80px;
+      }
+      .legal h1 {
+        font-size: clamp(32px, 4vw, 44px);
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+      .legal .updated {
+        color: var(--muted);
+        font-size: 14px;
+        margin-bottom: 44px;
+      }
+      .legal h2 {
+        font-size: 22px;
+        margin: 40px 0 12px;
+      }
+      .legal p, .legal li {
+        color: var(--muted);
+        line-height: 1.9;
+      }
+      .legal ul { padding-left: 22px; }
+      .legal a { color: var(--amber); }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="brand" href="./" aria-label="anywhere home">
+        <img class="brand-mark" src="./assets/anywhere-logo.png" alt="" />
+        <span>anywhere</span>
+      </a>
+    </header>
+
+    <main class="legal">
+      <h1>プライバシーポリシー</h1>
+      <p class="updated">最終更新日: 2026年8月7日</p>
+
+      <p>
+        本ポリシーは、Qurio Inc（以下「当社」）が提供するアプリケーション
+        「anywhere」（macOS 版・Windows 版・CLI 版を含む。以下「本アプリ」）に適用されます。
+      </p>
+
+      <h2>個人情報の収集について</h2>
+      <p>
+        本アプリは、<strong>個人情報を一切収集しません。</strong>
+        アカウント登録は不要で、利用状況の計測（アナリティクス・トラッキング）も行いません。
+      </p>
+
+      <h2>データの送信について</h2>
+      <p>
+        本アプリは、<strong>いかなるデータも外部に送信しません。</strong>
+        すべての処理（スリープ設定の変更・タイマー・状態の記録）はお使いの端末内で完結します。
+        ネットワーク通信を行う機能はありません。
+      </p>
+
+      <h2>端末内に保存される情報</h2>
+      <p>本アプリが端末内にのみ保存する情報は次のとおりです。</p>
+      <ul>
+        <li>元の電源設定のバックアップ（OFF 時の復元に使用）</li>
+        <li>タイマーや動作状態の記録、動作ログ</li>
+      </ul>
+      <p>
+        これらはお使いの端末から外部に送信されることはなく、
+        アプリのアンインストールや状態フォルダの削除でいつでも消去できます。
+      </p>
+
+      <h2>権限の利用について</h2>
+      <p>
+        本アプリは、フタを閉じたときのスリープ設定を変更するために、初回セットアップ時に
+        一度だけ管理者権限の許可を求めます（macOS: <code>pmset</code> 専用の sudoers ルール、
+        Windows: 電源設定用の Scheduled Task）。この権限はスリープ設定の変更・復元のみに
+        使用されます。本アプリはオープンソース（MIT ライセンス）であり、動作は
+        <a href="https://github.com/Qurio-Inc/code_anywhere" rel="noreferrer">公開されているソースコード</a>で検証できます。
+      </p>
+
+      <h2>お問い合わせ</h2>
+      <p>
+        本ポリシーに関するお問い合わせは
+        <a href="https://github.com/Qurio-Inc/code_anywhere/issues" rel="noreferrer">GitHub Issues</a>
+        までお寄せください。
+      </p>
+    </main>
+
+    <footer class="footer">
+      <span>anywhere</span>
+      <a href="./">ホーム</a>
+      <a href="https://github.com/Qurio-Inc/code_anywhere" rel="noreferrer">GitHub</a>
+    </footer>
+  </body>
+</html>
